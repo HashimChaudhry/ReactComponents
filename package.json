@@ -1,6 +1,7 @@
 {
   "name": "reactcomponents",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Various react components",
   "main": "index.js",
   "scripts": {
@@ -13,7 +14,7 @@
   "author": "Hashim Chaudhry",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/subhanbaig209/hackdavischatbot/issues"
+    "url": "https://github.com/HashimChaudhry/ReactComponents/issues"
   },
-  "homepage": "https://github.com/subhanbaig209/hackdavischatbot#readme"
+  "homepage": "https://github.com/HashimChaudhry/ReactComponents#readme"
 }
