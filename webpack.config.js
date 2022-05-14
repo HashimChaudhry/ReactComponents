@@ -17,14 +17,16 @@ module.exports = {
 	
 	// Plugins that webpack will use
 	plugins: [
-		new HtmlWebpackPlugin()
-	]
+		new HtmlWebpackPlugin({
+			template: "./src/html/index.html"
+		})
+	],
 	
 	// Modules that webpack will resolve (that is, that webpack will bundle)
 	resolve: {
-		modules: [__dirname, "src", "node_modules"].
+		modules: [__dirname, "src", "node_modules"],
 		extensions: ["*",  ".js", ".jsx", ".tsx", ".ts"]
-	}
+	},
 
 	module: {
 		// Rules in regex that tell webpack how to bundle assets
