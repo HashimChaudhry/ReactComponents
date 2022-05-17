@@ -1,12 +1,13 @@
 import react from "react"
-import styles from "../../css/card.module.css
+import style from "../../css/card.module.css"
 
-let OverlayTextCard = ({ text, image }) => {
+
+let Card = ({ text, image }) => {
 	return (
 		<div>
-			
+			<img src={image} />
 		</div>
 	)
 }
 
-export default OverlayTextCard;
+export default Card;
