@@ -1,12 +1,13 @@
 import React from "react"
-import style from "../../css/card.module.css"
+import style from "./styles/card.module.css"
 
 
-let Card = ({ text, image, children }) => {
-	return (
+let Card = () => {  
+	return ( 
 		<div>
-			{children}
+			<p>Teg</p>
 		</div>
+	
 
 	)
 }

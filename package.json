@@ -1,40 +1,39 @@
 {
-  "name": "reactcomponents",
+  "name": "personalsite",
   "version": "1.0.0",
-  "description": "Various react components",
+  "description": "Personal Website for displaying work",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w --watch-poll",
-    "build": "webpack --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HashimChaudhry/ReactComponents.git"
+    "start": "webpack serve --hot --open",
+    "build": "webpack --config webpack.config.js --mode production"
   },
   "author": "Hashim Chaudhry",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HashimChaudhry/ReactComponents/issues"
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "framer-motion": "^6.2.8",
+    "material-dashboard-react": "^1.10.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1"
   },
-  "homepage": "https://github.com/HashimChaudhry/ReactComponents#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/plugin-transform-runtime": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@svgr/webpack": "^6.2.1",
-    "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "style-loader": "^3.3.1",
-    "webpack": "^5.72.1",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
-  },
-  "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "webpack-dev-server": "^4.7.4"
   }
 }
