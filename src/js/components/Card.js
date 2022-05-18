@@ -1,12 +1,13 @@
-import react from "react"
+import React from "react"
 import style from "../../css/card.module.css"
 
 
-let Card = ({ text, image }) => {
+let Card = ({ text, image, children }) => {
 	return (
 		<div>
-			<img src={image} />
+			{children}
 		</div>
+
 	)
 }
 

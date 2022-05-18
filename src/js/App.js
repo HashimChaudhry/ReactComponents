@@ -1,8 +1,12 @@
 import React from "react"
+import Card from "./components/Card"
+import Logo from "../assets/Logo.svg"
 
 let App = () => {
 	return (
-		<p>Testing This rn</p>
+		<Card text={"Test"}>
+			<Logo />
+		</Card> 
 	)
 }
 
