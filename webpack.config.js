@@ -37,7 +37,7 @@ module.exports = {
 				loader: "babel-loader"						// Loader to use
 			},
 			{
-				test: /\.module\.css$/,
+				test: /\.module\.css|.css$/,
 				exclude: /\g\l\o\b\a\l\s\.\c\s\s/,
 				use: ["style-loader", "css-loader"]			// use is the same as loader, but allows more than one option (loaders applied in order of listing)
 			},

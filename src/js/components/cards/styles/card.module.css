@@ -6,12 +6,8 @@
 	overflow: hidden;
 	box-shadow: 1px 1px 30px 1px #d1d1d1;
 	border-radius: 30px;
-	width: 300px;
 }
 
-.cardHover {
-	width: 500px;
-}
 
 .image {
 	min-width: 500px;

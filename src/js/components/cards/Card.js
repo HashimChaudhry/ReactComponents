@@ -1,28 +1,26 @@
-import React from "react"
-import styles from "./styles/card.module.css"
-import { useState, useEffect } from "react"
+import React from "react";
+import styles from "./styles/card.module.css";
+import { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group"; 
+import "./styles/transitions.css"
 
 let Card = ({ text, image, children }) => {
-	// State to manage whether use has hovered over object or not
+	// State to manage hover animation
 	let [hover, setHover] = useState(false);
-	let currStyle = styles.cardContainer;
-
-	useEffect(() => {
-		if(hover) {
-			console.log("Ran")
-	 	  	currStyle = styles.cardHover;
-		} else {
-			currStyle = styles.cardContainer;
-		}
-		
-	}, [hover]);
-
+	const hoverDuration = 300;
 	
+	// Function to manage hover state change
+	let toggleHover  = () => {
+		setHover(!hover);
+	}
+
 	return (
-		<div onMouseLeave = {() => setHover(false)} onMouseEnter={() => setHover(true)} className={currStyle}>
-			<span className={styles.image}>{children}</span>
-			<p>{text}</p>
-		</div>	
+		<CSSTransition in={hover} classNames="hoverGrow">
+			<div onMouseLeave={toggleHover} onMouseEnter={toggleHover} className={styles.cardContainer}>
+				<span className={styles.image}>{children}</span>
+				<p>{text}</p>
+			</div>	
+		</CSSTransition>
 	)
 
 }
