@@ -1,0 +1,9 @@
+:root {
+	--box-shadow-color: #d1d1d1;
+}
+
+/* Font Families  */
+@font-face {
+	font-family: "Montserrat Medium";
+	src: url("./assets/Montserrat/ttf/Montserrat-Medium.ttf")
+}

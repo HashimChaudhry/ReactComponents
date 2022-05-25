@@ -1,40 +1,37 @@
+@import url("../../../../globals.module.css");
+
 .cardContainer {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	overflow-x: hidden;
 	align-items: center;
-	overflow: hidden;
-	box-shadow: 1px 1px 30px 1px #d1d1d1;
+	box-shadow: 1px 1px 30px 1px var(--box-shadow-color);
 	border-radius: 30px;
 	width: 300px;
 	transition: width 200ms, height 200ms;
+	border: 2px solid black;
 }
 
-/* Animation code for hover (can be found in transitions folder as well*/
-.hoverGrowEnter {
-	width: 300px;
-	height: 410px;
-	transition: width 200ms, height 200ms;
-}
-
-.hoverGrowEnterDone {
+.cardContainer:hover {
 	width: 310px;
-	height: 420px;
-	transition: width 200ms, height 200ms;
-}
-
-.hoverGrowExit {
-	width: 310px;
-	height: 420px;
-	transition: width 200ms, height 200ms;
-}
-
-.hoverGrowExitDone {
-	width: 300px;
-	height: 410px;
-	transition: width 200ms, height 200ms;
 }
 
 .image {
 	min-width: 500px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cardText {
+	width: 250px;
+	font-family: "Montserrat Medium"	
+}
+
+.title {
+	width: 300px;
 }

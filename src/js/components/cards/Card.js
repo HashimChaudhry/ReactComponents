@@ -3,29 +3,48 @@ import styles from "./styles/card.module.css";
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group"; 
 
-let Card = ({ text, image, children }) => {
+let CardContainer = () => {
+
+}
+
+let Card = ({ text, title, children, timeout=0, height=500 }) => {
 	// State to manage hover animation
 	let [hover, setHover] = useState(false);
 	
-	// Function to manage hover state change
-	let toggleHover  = () => {
+	let animation = {
+		height: 1000 
+	}
+	
+	let toggleHover = () => {
 		setHover(!hover);
 	}
 
-	return (
-		<CSSTransition in={hover} classNames={{
-				enterActive: styles.hoverGrowEnter,
-				enterDone: styles.hoverGrowEnterDone,
-				exitActive: styles.hoverGrowExit,
-				exitDone: styles.hoverGrowExitDone
-			}}>
-			<div onMouseLeave={toggleHover} onMouseEnter={toggleHover} className={styles.cardContainer}>
-				<span className={styles.image}>{children}</span>
-				<p>{text}</p>
-			</div>	
-		</CSSTransition>
-	)
+	// Styles to add dynamically
+	let bodyStyle = generateFont();
+	let titleStyle = generateFont(25, 12);
 
+	return (
+			<div onMouseLeave={toggleHover} onMouseEnter={toggleHover}
+				style={{height: hover ? height + 10 : height}} className={styles.cardContainer}>
+				
+				<span className={styles.image}>{children}</span>
+					<div className={styles.textContainer}>
+						<p style={titleStyle} className={styles.title}>{title}</p>
+						<p style={bodyStyle} className={styles.cardText}>{text}</p>
+
+					</div>
+				</div>	
+	)
+}
+
+
+let generateFont  = (fontSize=12, lineHeight=20) => {
+	let height = `${lineHeight}px`;
+
+	return ({
+		fontSize: fontSize,
+		lineHeight: height,
+	})
 }
 
 export default Card;
