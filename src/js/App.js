@@ -7,7 +7,7 @@ let App = () => {
 	let text = "Discover the future with our wide suite of products designed to help you out with the next phase of your company";
 	return (
 		<div className={styles.page}>
-			<Card title={"Discover The Future"} text={text}>
+			<Card width={"auto"} height={600} title={"Discover The Future"} text={text}>
 				<Logo />
 			</Card> 
 		</div>

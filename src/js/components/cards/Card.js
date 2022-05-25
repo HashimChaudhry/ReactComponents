@@ -7,7 +7,7 @@ let CardContainer = () => {
 
 }
 
-let Card = ({ text, title, children, timeout=0, height=500 }) => {
+let Card = ({ text, title, children, timeout=0, width="auto", height="auto" }) => {
 	// State to manage hover animation
 	let [hover, setHover] = useState(false);
 	
@@ -25,7 +25,7 @@ let Card = ({ text, title, children, timeout=0, height=500 }) => {
 
 	return (
 			<div onMouseLeave={toggleHover} onMouseEnter={toggleHover}
-				style={{height: hover ? height + 10 : height}} className={styles.cardContainer}>
+				style={{height: hover ? height + 10 : height, width: hover ? width + 10 : width}} className={styles.cardContainer}>
 				
 				<span className={styles.image}>{children}</span>
 					<div className={styles.textContainer}>

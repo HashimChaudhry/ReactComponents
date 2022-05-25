@@ -7,13 +7,8 @@
 	align-items: center;
 	box-shadow: 1px 1px 30px 1px var(--box-shadow-color);
 	border-radius: 30px;
-	width: 300px;
 	transition: width 200ms, height 200ms;
 	border: 2px solid black;
-}
-
-.cardContainer:hover {
-	width: 310px;
 }
 
 .image {
