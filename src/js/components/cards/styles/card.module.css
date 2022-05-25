@@ -3,12 +3,11 @@
 .cardContainer {
 	display: flex;
 	flex-direction: column;
-	overflow-x: hidden;
+	overflow: hidden;
 	align-items: center;
 	box-shadow: 1px 1px 30px 1px var(--box-shadow-color);
 	border-radius: 30px;
 	transition: width 200ms, height 200ms;
-	border: 2px solid black;
 }
 
 .image {
@@ -18,15 +17,15 @@
 .textContainer {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
 
 .cardText {
-	width: 250px;
-	font-family: "Montserrat Medium"	
+	font-family: "Montserrat Medium";
+	width: 280px;
 }
 
 .title {
-	width: 300px;
+	font-family: "Montserrat Medium";
 }

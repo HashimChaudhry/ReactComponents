@@ -1,0 +1,13 @@
+.cardContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 200;
+	height: 200;
+	overflow: hidden;
+}
+
+.test {
+	border: 2px solid black;
+}
