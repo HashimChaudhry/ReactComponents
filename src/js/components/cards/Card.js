@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group"; 
 
 // Basic Card element with styles to set the width and height
-let Card = ({ image , children, width="auto", height="auto" }) => {
+let Card = ({ image , children }) => {
 	return (
-		<div style={{width: width, height: height}} className={styles.cardContainer}>
+		<div className={styles.cardContainer}>
 				<span className={styles.image}>{image}</span>
 				<div className={styles.textContainer}>
 					{children}
